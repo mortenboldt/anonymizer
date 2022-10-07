@@ -5,10 +5,10 @@ import spacy
 
 app = FastAPI()
 try:
-    nlp = spacy.load("da_core_news_md")
+    nlp = spacy.load("da_core_news_lg")
 except: # If not present, we download
-    spacy.cli.download("da_core_news_md")
-    nlp = spacy.load("da_core_news_md")
+    spacy.cli.download("da_core_news_lg")
+    nlp = spacy.load("da_core_news_lg")
 
 class Item(BaseModel):
     text: str
